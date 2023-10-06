@@ -15,14 +15,14 @@ class InvalidTaskPath(Exception):
     def __init__(self, path):
         self.message = (
             "Invalid path: '{}', path can only contain one '/'. "
-            "Please specify the task in format: '<list>/<task>'".format(path)
+            "Please specify the task in format: '<list>|<task>'".format(path)
         )
         super(InvalidTaskPath, self).__init__(self.message)
 
 
 def parse_task_path(task_path):
     if "/" in task_path:
-        elems = task_path.split("/")
+        elems = task_path.split("|")
         if len(elems) > 2:
             raise InvalidTaskPath(task_path)
         return elems[0], elems[1]
