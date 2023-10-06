@@ -15,7 +15,12 @@ A Terminal Client for Microsoft To-Do.
 Installation
 ------------
 
-***Remember to [register for an API key](https://github.com/kiblee/tod0/tree/master/GET_KEY.md) before using `tod0`***
+***Remember to [register for an API key](https://github.com/zetsmod/tod0/tree/master/GET_KEY.md) before using `tod0`***
+
+### Install latest custom package by ZETSMOD
+```sh
+pipx install git+https://github.com/zetsmod/tod0.git
+```
 
 ### Install from PyPI
 
