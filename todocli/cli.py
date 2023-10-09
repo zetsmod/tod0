@@ -21,7 +21,7 @@ class InvalidTaskPath(Exception):
 
 
 def parse_task_path(task_path):
-    if "/" in task_path:
+    if "|" in task_path:
         elems = task_path.split("|")
         if len(elems) > 2:
             raise InvalidTaskPath(task_path)
